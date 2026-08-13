@@ -157,3 +157,18 @@ updates:
           day: "friday"
           time: "09:00"
           timezone: "America/Los_Angeles"
+
+  # Upstream-blocked (security_update_not_possible, docs/FORK_REVIEW.md):
+  # sharp/serialize-javascript/uuid are pinned by the Docusaurus docs
+  # workspace CJS chain; image-size has no upstream patch at all. The npm
+  # overrides for these destabilize the workspace install (tried, reverted
+  # 2026-08-13). Re-check when Docusaurus bumps its chain.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "sharp"
+      - dependency-name: "serialize-javascript"
+      - dependency-name: "uuid"
+      - dependency-name: "image-size"
