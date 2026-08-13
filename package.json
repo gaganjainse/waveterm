@@ -139,5 +139,8 @@
     "workspaces": [
         "docs",
         "tsunami/frontend"
-    ]
+    ],
+    "overrides": {
+        "dompurify": "^3.4.13"
+    }
 }
