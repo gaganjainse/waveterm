@@ -141,6 +141,6 @@
         "tsunami/frontend"
     ],
     "overrides": {
-        "dompurify": "^3.4.13"
+        "dompurify": "^3.4.17"
     }
 }
